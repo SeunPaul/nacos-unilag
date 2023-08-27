@@ -1,6 +1,6 @@
 import { SectionWrapper } from "./StyledComponents";
-import logo from "../assets/illustrations/logo.png";
-import navIcon from "../assets/icons/navIcon.svg";
+import { ReactComponent as NavIcon } from "../assets/icons/navIcon.svg";
+import { ReactComponent as Logo } from "../assets/icons/logo.svg";
 
 interface INav {
   page: "home" | "about" | "bits" | "contact";
@@ -18,24 +18,22 @@ function DesktopNavigation({ page }: INav) {
     <div>
       <SectionWrapper className="mb-6 flex items-center justify-between py-6 md:mb-16">
         <>
-          <img
-            src={logo}
-            alt="students in front of the department"
-            className="w-12 cursor-pointer sm:w-14 md:w-16"
-          />
+          <Logo className="w-12 cursor-pointer sm:w-14 md:w-16" />
           <div className="hidden md:block">
             <ul className="flex list-none font-semibold">
               {navItems.map((item) => (
                 <li
                   key={item.value}
-                  className={`mx-4 ${page === item.value ? "text-green" : ""}`}
+                  className={`mx-4 cursor-pointer ${
+                    page === item.value ? "text-green" : ""
+                  }`}
                 >
                   {item.label}
                 </li>
               ))}
             </ul>
           </div>
-          <img src={navIcon} alt="" className="w-6 cursor-pointer md:hidden" />
+          <NavIcon className="cursor-pointer md:hidden" />
           <div className="hidden md:block" />
         </>
       </SectionWrapper>
