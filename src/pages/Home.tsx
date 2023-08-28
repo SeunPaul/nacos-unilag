@@ -4,7 +4,7 @@ import { ReactComponent as Network } from "../assets/icons/network.svg";
 import { ReactComponent as Security } from "../assets/icons/security.svg";
 import { ReactComponent as Productivity } from "../assets/icons/productivity.svg";
 import { ReactComponent as Code } from "../assets/icons/code.svg";
-import { ReactComponent as Union } from "../assets/illustrations/union.svg";
+// import { ReactComponent as Union } from "../assets/illustrations/union.svg";
 import hero from "../assets/illustrations/hero.png";
 import learning from "../assets/images/learning.jpg";
 
