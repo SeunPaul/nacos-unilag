@@ -60,18 +60,18 @@ function Home() {
                 shape the future of technology!
               </p>
             </div>
-            <div className="hidden w-1/3 items-center justify-end md:flex lg:w-2/5">
-              <div className=" animate-spin-slow relative h-[270px] w-60 lg:w-80 ">
-                <div className="absolute left-28 top-0 flex h-16 w-16 items-center justify-center rounded-full bg-green lg:left-32 lg:h-24 lg:w-24">
+            <div className="hidden w-1/3 items-center justify-end pr-2 md:flex lg:w-2/5">
+              <div className=" animate-spin-slow relative h-52 w-52 lg:h-72 lg:w-72">
+                <div className="absolute left-1/2 top-0 flex h-16 w-16 -translate-x-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
                   <Network className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
                 </div>
-                <div className="absolute right-0 top-28 flex h-16 w-16 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
+                <div className="absolute right-0 top-1/2 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
                   <Security className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
                 </div>
-                <div className="absolute bottom-10 left-16 flex h-16 w-16 items-center justify-center rounded-full bg-green lg:bottom-0 lg:left-24 lg:h-24 lg:w-24">
+                <div className="absolute bottom-0 left-1/2 flex  h-16 w-16 -translate-x-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
                   <Productivity className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
                 </div>
-                <div className="absolute left-0 top-16 flex h-16 w-16 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
+                <div className="absolute left-0 top-1/2 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
                   <Code className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
                 </div>
               </div>
@@ -82,9 +82,9 @@ function Home() {
 
       {/* Dynamic learning environment */}
       <div className="bg-green pb-80 pt-32">
-        <SectionWrapper className="flex flex-wrap items-center justify-between">
+        <SectionWrapper className="flex flex-wrap items-center justify-between gap-10">
           <>
-            <div className="h-[510px] w-[500px] -rotate-3 rounded-3xl bg-[#FFFFFF33] p-4">
+            <div className="mb-10 h-96 w-[490px] -rotate-3 rounded-3xl bg-[#FFFFFF33] p-4 md:h-[500px]">
               <img
                 src={learning}
                 alt=""
@@ -92,17 +92,17 @@ function Home() {
               />
             </div>
             <div className="w-[590px] text-white">
-              <h3 className="mb-4 text-2xl font-bold md:mb-10 md:text-5xl">
+              <h3 className="mb-4 text-2xl font-bold md:mb-10 md:text-5xl md:leading-tight">
                 Join our Dynamic learning environment
               </h3>
-              <p className="mb-8 text-justify">
+              <p className="mb-8 text-justify leading-loose">
                 Here at Computer Science, we prioritise change, activity and
                 progress. Our core focus is intentionally designed to meet the
                 needs of all students while challenging them to enhance existing
                 skills, interests and understandings, as well as meaningfully
                 building new ones.
               </p>
-              <p className="text-justify">
+              <p className="text-justify leading-loose">
                 Not only do our students learn in a supportive environment well
                 equipped with use of modern educational facilities that nurtures
                 self-sufficiency and responsibility, but they also learn in ways
