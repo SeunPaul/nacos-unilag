@@ -1,4 +1,7 @@
 import DesktopNavigation from "../components/DesktopNavigation";
+import NewsCard from "../components/NewsCard";
+// import Footer from "../components/Footer";
+import news from "../news";
 import { SectionWrapper } from "../components/StyledComponents";
 import { ReactComponent as Network } from "../assets/icons/network.svg";
 import { ReactComponent as Security } from "../assets/icons/security.svg";
@@ -32,36 +35,39 @@ function Home() {
       </div>
 
       {/* What we do */}
-      <div className="pb-80 pt-32 md:pt-80">
+      <div className="pb-64 pt-32 md:pt-80">
         <SectionWrapper className="flex justify-between">
           <>
             <div className="md:w-3/5">
               <h3 className="mb-4 text-2xl font-bold md:mb-10 md:text-5xl">
                 What we do here
               </h3>
-              <p className="mb-8 text-justify">
-                Hey there! Welcome to the Department of Computer Science at the
-                University of Lagos! We're all about embracing innovation and
-                staying on the cutting edge of technology. Our faculty and
-                students are passionate about exploring AI, cybersecurity,
-                software engineering, and more. With hands-on projects and
-                real-world experiences, we're here to empower you on your
-                journey to becoming a tech leader. We love to think outside the
-                box and work closely with industry partners to make a meaningful
-                impact.
-              </p>
-              <p className="text-justify">
-                Our inclusive community celebrates diversity and provides a warm
-                and supportive environment for everyone. Join us for enriching
-                seminars, workshops, and tech talks to stay up-to-date with the
-                latest tech trends. We're committed to helping you grow, from
-                providing career support to offering exciting extracurricular
-                activities. Let's embark on this exciting adventure together and
-                shape the future of technology!
-              </p>
+              <div className="leading-7">
+                <p className="mb-8 text-justify">
+                  Hey there! Welcome to the Department of Computer Science at
+                  the University of Lagos! We're all about embracing innovation
+                  and staying on the cutting edge of technology. Our faculty and
+                  students are passionate about exploring AI, cybersecurity,
+                  software engineering, and more. With hands-on projects and
+                  real-world experiences, we're here to empower you on your
+                  journey to becoming a tech leader. We love to think outside
+                  the box and work closely with industry partners to make a
+                  meaningful impact.
+                </p>
+                <p className="text-justify">
+                  Our inclusive community celebrates diversity and provides a
+                  warm and supportive environment for everyone. Join us for
+                  enriching seminars, workshops, and tech talks to stay
+                  up-to-date with the latest tech trends. We're committed to
+                  helping you grow, from providing career support to offering
+                  exciting extracurricular activities. Let's embark on this
+                  exciting adventure together and shape the future of
+                  technology!
+                </p>
+              </div>
             </div>
             <div className="hidden w-1/3 items-center justify-end pr-2 md:flex lg:w-2/5">
-              <div className=" animate-spin-slow relative h-52 w-52 lg:h-72 lg:w-72">
+              <div className=" relative h-52 w-52 animate-spin-slow lg:h-72 lg:w-72">
                 <div className="absolute left-1/2 top-0 flex h-16 w-16 -translate-x-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
                   <Network className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
                 </div>
@@ -81,38 +87,65 @@ function Home() {
       </div>
 
       {/* Dynamic learning environment */}
-      <div className="bg-green pb-80 pt-32">
+      <div className="bg-green pb-56 pt-32">
         <SectionWrapper className="flex flex-wrap items-center justify-between gap-10">
           <>
-            <div className="mb-10 h-96 w-[490px] -rotate-3 rounded-3xl bg-[#FFFFFF33] p-4 md:h-[500px]">
+            <div className="xl:w-[490px] xl:h-[500px] h-72 -rotate-3 rounded-3xl bg-[#FFFFFF33] p-4 lg:h-96 lg:w-96">
               <img
                 src={learning}
                 alt=""
                 className="h-full w-full rounded-2xl"
               />
             </div>
-            <div className="w-[590px] text-white">
-              <h3 className="mb-4 text-2xl font-bold md:mb-10 md:text-5xl md:leading-tight">
+            <div className="xl:w-[590px] w-full text-white md:w-1/2">
+              <h3 className="xl:text-5xl mb-4 text-2xl font-bold md:mb-10 md:leading-tight lg:text-3xl">
                 Join our Dynamic learning environment
               </h3>
-              <p className="mb-8 text-justify leading-loose">
-                Here at Computer Science, we prioritise change, activity and
-                progress. Our core focus is intentionally designed to meet the
-                needs of all students while challenging them to enhance existing
-                skills, interests and understandings, as well as meaningfully
-                building new ones.
-              </p>
-              <p className="text-justify leading-loose">
-                Not only do our students learn in a supportive environment well
-                equipped with use of modern educational facilities that nurtures
-                self-sufficiency and responsibility, but they also learn in ways
-                that challenge them and help cultivate a greater sense of
-                creativity and achieve their full potential.
-              </p>
+              <div className="leading-7">
+                <p className="mb-6 text-justify">
+                  Here at Computer Science, we prioritise change, activity and
+                  progress. Our core focus is intentionally designed to meet the
+                  needs of all students while challenging them to enhance
+                  existing skills, interests and understandings, as well as
+                  meaningfully building new ones.
+                </p>
+                <p className="text-justify">
+                  Not only do our students learn in a supportive environment
+                  well equipped with use of modern educational facilities that
+                  nurtures self-sufficiency and responsibility, but they also
+                  learn in ways that challenge them and help cultivate a greater
+                  sense of creativity and achieve their full potential.
+                </p>
+              </div>
             </div>
           </>
         </SectionWrapper>
       </div>
+
+      {/* News & Events */}
+      <div className="pb-24 pt-12 md:pt-24">
+        <SectionWrapper>
+          <>
+            <h3 className="mb-4 text-center text-2xl font-bold md:mb-12 md:text-5xl md:leading-tight">
+              News & Events
+            </h3>
+            <div className="xl:gap-8 grid grid-cols-1 gap-4  sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
+              {news.map(({ id, thumbnail, date, title, preview }) => (
+                <NewsCard
+                  key={id}
+                  thumbnail={thumbnail}
+                  date={date}
+                  title={title}
+                  preview={preview}
+                />
+              ))}
+            </div>
+          </>
+        </SectionWrapper>
+      </div>
+
+      {/* Footer */}
+      {/* <Footer page="home" /> */}
     </div>
   );
 }

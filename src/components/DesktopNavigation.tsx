@@ -1,19 +1,13 @@
 import { SectionWrapper } from "./StyledComponents";
 import { ReactComponent as NavIcon } from "../assets/icons/navIcon.svg";
 import { ReactComponent as Logo } from "../assets/icons/logo.svg";
+import { navItems } from "./contansts";
 
 interface INav {
   page: "home" | "about" | "bits" | "contact";
 }
 
 function DesktopNavigation({ page }: INav) {
-  const navItems = [
-    { label: "Home", value: "home", url: "/" },
-    { label: "About", value: "about", url: "/about" },
-    { label: "Bits & Bytes", value: "bits", url: "/bits-and-bytes" },
-    { label: "Contact us", value: "contact", url: "/contact" },
-  ];
-
   return (
     <div>
       <SectionWrapper className="mb-6 flex items-center justify-between py-6 md:mb-16">
