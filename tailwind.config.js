@@ -24,6 +24,9 @@ export default {
         green: "#197F00",
         lgreen: "#F1FDD9",
       },
+      animation: {
+        "spin-slow": "spin 15s linear infinite",
+      },
     },
   },
   plugins: ["prettier-plugin-tailwindcss"],

@@ -1,29 +1,31 @@
 import DesktopNavigation from "../components/DesktopNavigation";
 import { SectionWrapper } from "../components/StyledComponents";
-import hero from "../assets/illustrations/hero.png";
 import { ReactComponent as Network } from "../assets/icons/network.svg";
 import { ReactComponent as Security } from "../assets/icons/security.svg";
 import { ReactComponent as Productivity } from "../assets/icons/productivity.svg";
 import { ReactComponent as Code } from "../assets/icons/code.svg";
+import { ReactComponent as Union } from "../assets/illustrations/union.svg";
+import hero from "../assets/illustrations/hero.png";
+import learning from "../assets/images/learning.jpg";
 
 function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="vs:pb-40 bg-lgreen pb-20 xs:pb-24 sm:pb-52 lg:pb-72">
+      <div className="bg-lgreen pb-20 xs:pb-24 vs:pb-40 sm:pb-52 lg:pb-72">
         <DesktopNavigation page="home" />
         <SectionWrapper className="relative">
           <>
             <h1 className="mb-2 text-center text-3xl font-extrabold xs:text-4xl md:mb-4 md:text-7xl lg:text-8xl">
               NACOS UNILAG
             </h1>
-            <p className="text-center text-lg font-semibold xs:text-2xl lg:text-3xl">
+            <p className="px-4 text-center text-lg font-semibold xs:text-2xl lg:text-3xl">
               Building the Future of Computing
             </p>
             <img
               src={hero}
               alt=""
-              className="vs:-bottom-64 absolute -bottom-36 left-1/2 mx-auto w-[95%] -translate-x-1/2 xs:-bottom-44 sm:-bottom-80 md:-bottom-96 lg:-bottom-[30rem] lg:w-4/5"
+              className="absolute -bottom-36 left-1/2 mx-auto w-[95%] -translate-x-1/2 xs:-bottom-44 vs:-bottom-64 sm:-bottom-80 md:-bottom-96 lg:-bottom-[30rem] lg:w-4/5"
             />
           </>
         </SectionWrapper>
@@ -58,21 +60,55 @@ function Home() {
                 shape the future of technology!
               </p>
             </div>
-            <div className="hidden w-2/5 items-center justify-end md:flex">
-              <div className=" relative h-[270px] w-80 rounded-full ">
-                <div className="absolute left-32 top-0 flex h-24 w-24 items-center justify-center rounded-full bg-green">
-                  <Network className="h-[35px] w-[35px]" />
+            <div className="hidden w-1/3 items-center justify-end md:flex lg:w-2/5">
+              <div className=" animate-spin-slow relative h-[270px] w-60 lg:w-80 ">
+                <div className="absolute left-28 top-0 flex h-16 w-16 items-center justify-center rounded-full bg-green lg:left-32 lg:h-24 lg:w-24">
+                  <Network className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
                 </div>
-                <div className="absolute right-0 top-28 flex h-24 w-24 items-center justify-center rounded-full bg-green">
-                  <Security className="h-[35px] w-[35px]" />
+                <div className="absolute right-0 top-28 flex h-16 w-16 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
+                  <Security className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
                 </div>
-                <div className="absolute bottom-0 left-24 flex h-24 w-24 items-center justify-center rounded-full bg-green">
-                  <Productivity className="h-[35px] w-[35px]" />
+                <div className="absolute bottom-10 left-16 flex h-16 w-16 items-center justify-center rounded-full bg-green lg:bottom-0 lg:left-24 lg:h-24 lg:w-24">
+                  <Productivity className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
                 </div>
-                <div className="absolute left-0 top-16 flex h-24 w-24 items-center justify-center rounded-full bg-green">
-                  <Code className="h-[35px] w-[35px]" />
+                <div className="absolute left-0 top-16 flex h-16 w-16 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
+                  <Code className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
                 </div>
               </div>
+            </div>
+          </>
+        </SectionWrapper>
+      </div>
+
+      {/* Dynamic learning environment */}
+      <div className="bg-green pb-80 pt-32">
+        <SectionWrapper className="flex flex-wrap items-center justify-between">
+          <>
+            <div className="h-[510px] w-[500px] -rotate-3 rounded-3xl bg-[#FFFFFF33] p-4">
+              <img
+                src={learning}
+                alt=""
+                className="h-full w-full rounded-2xl"
+              />
+            </div>
+            <div className="w-[590px] text-white">
+              <h3 className="mb-4 text-2xl font-bold md:mb-10 md:text-5xl">
+                Join our Dynamic learning environment
+              </h3>
+              <p className="mb-8 text-justify">
+                Here at Computer Science, we prioritise change, activity and
+                progress. Our core focus is intentionally designed to meet the
+                needs of all students while challenging them to enhance existing
+                skills, interests and understandings, as well as meaningfully
+                building new ones.
+              </p>
+              <p className="text-justify">
+                Not only do our students learn in a supportive environment well
+                equipped with use of modern educational facilities that nurtures
+                self-sufficiency and responsibility, but they also learn in ways
+                that challenge them and help cultivate a greater sense of
+                creativity and achieve their full potential.
+              </p>
             </div>
           </>
         </SectionWrapper>
