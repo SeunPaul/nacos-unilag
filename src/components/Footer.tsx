@@ -56,10 +56,14 @@ function Footer({ page }: IFooter) {
               </ul>
               <div className="flex gap-3">
                 <div className="cursor-pointer rounded-full border border-white p-2">
-                  <AiOutlineTwitter className="fill-white text-xl" />
+                  <a href="https://twitter.com/nacos_unilag" target="_blank">
+                    <AiOutlineTwitter className="fill-white text-xl" />
+                  </a>
                 </div>
                 <div className="cursor-pointer rounded-full border border-white p-2">
-                  <AiOutlineInstagram className="fill-white text-xl" />
+                  <a href="https://instagram.com/nacos_unilag" target="_blank">
+                    <AiOutlineInstagram className="fill-white text-xl" />
+                  </a>
                 </div>
               </div>
             </div>
