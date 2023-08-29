@@ -32,7 +32,7 @@ function BitsAndBytes() {
       <div className="pb-24">
         <SectionWrapper>
           <>
-            <h3 className="mb-4 text-2xl font-bold md:mb-8 md:text-[40px] md:leading-tight">
+            <h3 className="mb-4 text-2xl font-bold md:mb-8 md:text-[40px]">
               Upcoming Events
             </h3>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2  md:gap-6 lg:grid-cols-3 xl:gap-8">
@@ -54,7 +54,7 @@ function BitsAndBytes() {
       <div className="pb-24">
         <SectionWrapper>
           <>
-            <h3 className="mb-4 text-2xl font-bold md:mb-8 md:text-[40px] md:leading-tight">
+            <h3 className="mb-4 text-2xl font-bold md:mb-8 md:text-[40px]">
               News
             </h3>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2  md:gap-6 lg:grid-cols-3 xl:gap-8">
