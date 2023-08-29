@@ -1,4 +1,4 @@
-import nacostn from "../assets/images/news/nacos innovation summit.jpg";
+import nacostn from "../../assets/images/news/nacos innovation summit.jpg";
 
 export default {
   id: "1",

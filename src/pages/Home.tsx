@@ -1,7 +1,7 @@
 import DesktopNavigation from "../components/DesktopNavigation";
 import NewsCard from "../components/NewsCard";
 import Footer from "../components/Footer";
-import news from "../news";
+import { newsAndEvents } from "../blog";
 import { SectionWrapper } from "../components/StyledComponents";
 import { ReactComponent as Network } from "../assets/icons/network.svg";
 import { ReactComponent as Security } from "../assets/icons/security.svg";
@@ -131,15 +131,17 @@ function Home() {
               News & Events
             </h3>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2  md:gap-6 lg:grid-cols-3 xl:gap-8">
-              {news.map(({ id, thumbnail, date, title, preview }) => (
-                <NewsCard
-                  key={id}
-                  thumbnail={thumbnail}
-                  date={date}
-                  title={title}
-                  preview={preview}
-                />
-              ))}
+              {newsAndEvents
+                .slice(0, 3)
+                .map(({ id, thumbnail, date, title, preview }) => (
+                  <NewsCard
+                    key={id}
+                    thumbnail={thumbnail}
+                    date={date}
+                    title={title}
+                    preview={preview}
+                  />
+                ))}
             </div>
           </>
         </SectionWrapper>

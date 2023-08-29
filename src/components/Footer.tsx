@@ -1,4 +1,5 @@
 import { SectionWrapper } from "./StyledComponents";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/illustrations/logo.png";
 import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
 import { BiTargetLock } from "react-icons/bi";
@@ -9,6 +10,8 @@ interface IFooter {
 }
 
 function Footer({ page }: IFooter) {
+  const navigate = useNavigate();
+
   return (
     <div className="pb-32">
       <SectionWrapper>
@@ -25,6 +28,7 @@ function Footer({ page }: IFooter) {
             <button
               type="button"
               className="rounded-2xl bg-white px-10 py-4 text-sm font-bold text-green"
+              onClick={() => navigate("/contact")}
             >
               Send a message
             </button>
@@ -39,14 +43,15 @@ function Footer({ page }: IFooter) {
               </div>
               <ul className="flex list-none flex-col gap-4 text-sm font-semibold md:flex-row md:gap-0">
                 {navItems.map((item) => (
-                  <li
+                  <Link
+                    to={item.url}
                     key={item.value}
                     className={`mx-4 cursor-pointer ${
                       page === item.value ? "text-[#ffffffaa]" : "text-white"
                     }`}
                   >
                     {item.label}
-                  </li>
+                  </Link>
                 ))}
               </ul>
               <div className="flex gap-3">

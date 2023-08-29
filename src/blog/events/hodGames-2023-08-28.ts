@@ -1,4 +1,4 @@
-import hodGamestn from "../assets/images/news/hod games.jpg";
+import hodGamestn from "../../assets/images/news/hod games.jpg";
 
 export default {
   id: "2",

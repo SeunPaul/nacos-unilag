@@ -28,7 +28,10 @@ function NewsCard({ thumbnail, date, title, preview }: INewsCard) {
       <p className="text-[15px] leading-6">{`${preview.substring(0, 300)}${
         preview.length > 300 ? "..." : ""
       }`}</p>
-      <Link to="" className="mt-4 flex items-center gap-2 font-bold text-green">
+      <Link
+        to="/post"
+        className="mt-4 flex items-center gap-2 font-bold text-green"
+      >
         Learn More <HiArrowRight className="fill-green" />
       </Link>
     </div>
