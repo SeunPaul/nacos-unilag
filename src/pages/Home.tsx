@@ -17,7 +17,7 @@ function Home() {
       {/* Hero Section */}
       <div className="bg-lgreen pb-20 xs:pb-24 vs:pb-40 sm:pb-52 lg:pb-72">
         <DesktopNavigation page="home" />
-        <SectionWrapper className="relative">
+        <SectionWrapper className="relative mt-6 md:mt-16">
           <>
             <h1 className="mb-2 text-center text-3xl font-extrabold xs:text-4xl md:mb-4 md:text-7xl lg:text-8xl">
               NACOS UNILAG

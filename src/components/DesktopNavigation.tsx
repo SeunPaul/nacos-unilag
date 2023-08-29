@@ -13,7 +13,7 @@ function DesktopNavigation({ page }: INav) {
   return (
     <div>
       <ScrollToTop />
-      <SectionWrapper className="mb-6 flex items-center justify-between py-6 md:mb-16">
+      <SectionWrapper className="flex items-center justify-between py-6">
         <>
           <Logo className="w-12 cursor-pointer sm:w-14 md:w-16" />
           <div className="hidden md:block">

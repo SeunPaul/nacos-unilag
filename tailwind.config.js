@@ -26,6 +26,7 @@ export default {
       colors: {
         green: "#197F00",
         lgreen: "#F1FDD9",
+        pgreen: "#C9E396",
       },
       animation: {
         "spin-slow": "spin 15s linear infinite",
