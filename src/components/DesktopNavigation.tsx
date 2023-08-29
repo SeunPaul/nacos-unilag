@@ -1,5 +1,5 @@
+import { IoIosMenu } from "react-icons/io";
 import { SectionWrapper } from "./StyledComponents";
-import { ReactComponent as NavIcon } from "../assets/icons/navIcon.svg";
 import { ReactComponent as Logo } from "../assets/icons/logo.svg";
 import { navItems } from "./contansts";
 
@@ -27,7 +27,7 @@ function DesktopNavigation({ page }: INav) {
               ))}
             </ul>
           </div>
-          <NavIcon className="cursor-pointer md:hidden" />
+          <IoIosMenu className="h-8 w-8 cursor-pointer fill-green md:hidden" />
           <div className="hidden md:block" />
         </>
       </SectionWrapper>

@@ -1,13 +1,13 @@
 import DesktopNavigation from "../components/DesktopNavigation";
 import NewsCard from "../components/NewsCard";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 import news from "../news";
 import { SectionWrapper } from "../components/StyledComponents";
 import { ReactComponent as Network } from "../assets/icons/network.svg";
 import { ReactComponent as Security } from "../assets/icons/security.svg";
 import { ReactComponent as Productivity } from "../assets/icons/productivity.svg";
 import { ReactComponent as Code } from "../assets/icons/code.svg";
-// import { ReactComponent as Union } from "../assets/illustrations/union.svg";
+import { ReactComponent as Union } from "../assets/illustrations/union.svg";
 import hero from "../assets/illustrations/hero.png";
 import learning from "../assets/images/learning.jpg";
 
@@ -87,18 +87,18 @@ function Home() {
       </div>
 
       {/* Dynamic learning environment */}
-      <div className="bg-green pb-56 pt-32">
+      <div className="overflow-hidden bg-green pb-32 pt-32 sm:pb-56">
         <SectionWrapper className="flex flex-wrap items-center justify-between gap-10">
           <>
-            <div className="xl:w-[490px] xl:h-[500px] h-72 -rotate-3 rounded-3xl bg-[#FFFFFF33] p-4 lg:h-96 lg:w-96">
+            <div className="h-72 -rotate-3 rounded-3xl bg-[#FFFFFF33] p-4 lg:h-96 lg:w-96 xl:h-[500px] xl:w-[490px]">
               <img
                 src={learning}
                 alt=""
                 className="h-full w-full rounded-2xl"
               />
             </div>
-            <div className="xl:w-[590px] w-full text-white md:w-1/2">
-              <h3 className="xl:text-5xl mb-4 text-2xl font-bold md:mb-10 md:leading-tight lg:text-3xl">
+            <div className="relative w-full text-white md:w-1/2 xl:w-[590px]">
+              <h3 className="mb-4 text-2xl font-bold md:mb-10 md:leading-tight lg:text-3xl xl:text-5xl">
                 Join our Dynamic learning environment
               </h3>
               <div className="leading-7">
@@ -117,6 +117,7 @@ function Home() {
                   sense of creativity and achieve their full potential.
                 </p>
               </div>
+              <Union className="absolute -bottom-32 -right-20 h-64 sm:-bottom-72 sm:h-auto" />
             </div>
           </>
         </SectionWrapper>
@@ -129,7 +130,7 @@ function Home() {
             <h3 className="mb-4 text-center text-2xl font-bold md:mb-12 md:text-5xl md:leading-tight">
               News & Events
             </h3>
-            <div className="xl:gap-8 grid grid-cols-1 gap-4  sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2  md:gap-6 lg:grid-cols-3 xl:gap-8">
               {news.map(({ id, thumbnail, date, title, preview }) => (
                 <NewsCard
                   key={id}
@@ -145,7 +146,7 @@ function Home() {
       </div>
 
       {/* Footer */}
-      {/* <Footer page="home" /> */}
+      <Footer page="home" />
     </div>
   );
 }
