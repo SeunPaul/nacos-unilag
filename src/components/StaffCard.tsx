@@ -10,7 +10,7 @@ function StaffCard({ img, name, title }: IStaffCard) {
       <img
         src={img}
         alt=""
-        className="h-48 w-full rounded-2xl bg-[#D9D9D9] object-cover lg:h-56"
+        className="h-56 w-full rounded-2xl bg-[#D9D9D9] object-cover lg:h-72"
       />
       <h3 className="mb-1 mt-4 items-center text-center text-xl font-bold ">
         {name}
