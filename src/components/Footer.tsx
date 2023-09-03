@@ -21,8 +21,7 @@ function Footer({ page }: IFooter) {
             Collaborate with us
           </h2>
           <p className="mx-auto max-w-lg text-center text-sm leading-7 sm:text-base">
-            Mauris viverra platea aenean nec id nisl imperdiet vulputate
-            imperdiet. Volutpat ut blandit scelerisque laoreet habitasse libero{" "}
+            You can reach out to us for further information or assistance
           </p>
           <div className="my-10 flex justify-center">
             <button
