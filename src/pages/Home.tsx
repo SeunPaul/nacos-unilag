@@ -56,7 +56,7 @@ function Home() {
       </div>
 
       {/* What we do */}
-      <div className="pb-64 pt-32 md:pt-80">
+      <div className="pb-48 pt-32 sm:pb-64 md:pt-80">
         <SectionWrapper className="relative">
           <>
             <div className="flex justify-between">
@@ -105,7 +105,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-[500px] left-1/2 flex w-full -translate-x-1/2 flex-wrap justify-center gap-5 md:-bottom-96 md:flex-nowrap">
+            <div className="absolute -bottom-[700px] left-1/2 flex w-full -translate-x-1/2 flex-col flex-wrap items-center justify-center gap-5 px-5 sm:-bottom-[550px] sm:flex-row md:-bottom-[350px] md:w-auto md:flex-nowrap lg:-bottom-96">
               {numbers.map((item) => (
                 <div
                   key={item.text}
@@ -130,7 +130,7 @@ function Home() {
       </div>
 
       {/* Dynamic learning environment */}
-      <div className="overflow-hidden bg-green pb-32 pt-64 sm:pb-56">
+      <div className="overflow-hidden bg-green pb-32 pt-[600px] sm:pb-56 sm:pt-96 md:pt-64">
         <SectionWrapper className="flex flex-wrap items-center justify-between gap-10">
           <>
             <div className="h-72 -rotate-3 rounded-3xl bg-[#FFFFFF33] p-4 lg:h-96 lg:w-96 xl:h-[500px] xl:w-[490px]">
