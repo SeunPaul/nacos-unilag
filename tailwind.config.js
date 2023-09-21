@@ -23,6 +23,10 @@ export default {
       // => @media (min-width: 1280px) { ... }
     },
     extend: {
+      backgroundImage: {
+        bgradient:
+          "linear-gradient(180deg, rgba(25, 128, 1, 0) 0%, rgba(25, 127, 0, 0.82) 108.5%)",
+      },
       colors: {
         green: "#197F00",
         lgreen: "#F1FDD9",

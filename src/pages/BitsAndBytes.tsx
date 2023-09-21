@@ -14,11 +14,11 @@ function BitsAndBytes() {
         <DesktopNavigation page="bits" />
         <SectionWrapper className="mt-2">
           <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-2xl bg-lgreen md:h-64">
-            <div className="bg-pgreen absolute -right-4 -top-6 z-10 h-20 w-20 rounded-full md:-top-16 md:h-44 md:w-44">
+            <div className="absolute -right-4 -top-6 z-10 h-20 w-20 rounded-full bg-pgreen md:-top-16 md:h-44 md:w-44">
               <div className="h-16 w-16 rounded-full bg-green md:h-40 md:w-40" />
             </div>
             <div className="absolute -bottom-6 -left-4 z-10 h-20 w-20 rounded-full bg-green md:-bottom-16 md:h-44 md:w-44">
-              <div className="bg-pgreen h-16 w-16 rounded-full md:h-40 md:w-40" />
+              <div className="h-16 w-16 rounded-full bg-pgreen md:h-40 md:w-40" />
             </div>
             <h1 className="text-3xl font-extrabold md:text-6xl">
               Bits & Bytes
@@ -39,6 +39,7 @@ function BitsAndBytes() {
               {events.map(({ id, thumbnail, date, title, preview }) => (
                 <NewsCard
                   key={id}
+                  id={id}
                   thumbnail={thumbnail}
                   date={date}
                   title={title}
@@ -61,6 +62,7 @@ function BitsAndBytes() {
               {news.map(({ id, thumbnail, date, title, preview }) => (
                 <NewsCard
                   key={id}
+                  id={id}
                   thumbnail={thumbnail}
                   date={date}
                   title={title}

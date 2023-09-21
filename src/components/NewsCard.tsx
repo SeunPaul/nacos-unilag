@@ -3,13 +3,14 @@ import { HiArrowRight } from "react-icons/hi";
 import { FaCalendarAlt } from "react-icons/fa";
 
 interface INewsCard {
+  id: string;
   thumbnail: string;
   date: string;
   title: string;
   preview: string;
 }
 
-function NewsCard({ thumbnail, date, title, preview }: INewsCard) {
+function NewsCard({ id, thumbnail, date, title, preview }: INewsCard) {
   return (
     <div className="mb-6">
       <img
@@ -29,7 +30,7 @@ function NewsCard({ thumbnail, date, title, preview }: INewsCard) {
         preview.length > 300 ? "..." : ""
       }`}</p>
       <Link
-        to="/post"
+        to={`/post?q=${id}`}
         className="mt-4 flex items-center gap-2 font-bold text-green"
       >
         Learn More <HiArrowRight className="fill-green" />

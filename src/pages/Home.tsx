@@ -178,6 +178,7 @@ function Home() {
                 .slice(0, 3)
                 .map(({ id, thumbnail, date, title, preview }) => (
                   <NewsCard
+                    id={id}
                     key={id}
                     thumbnail={thumbnail}
                     date={date}
