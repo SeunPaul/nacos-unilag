@@ -10,8 +10,29 @@ import { ReactComponent as Code } from "../assets/icons/code.svg";
 import { ReactComponent as Union } from "../assets/illustrations/union.svg";
 import hero from "../assets/illustrations/hero.png";
 import learning from "../assets/images/learning.jpg";
+import people from "../assets/icons/people.svg";
+import verified from "../assets/icons/verified.svg";
+import book from "../assets/icons/book.svg";
 
 function Home() {
+  const numbers = [
+    {
+      icon: people,
+      text: "500+",
+      description: "Great Students",
+    },
+    {
+      icon: verified,
+      text: "40+",
+      description: "Expert Mentors",
+    },
+    {
+      icon: book,
+      text: "100+",
+      description: "Innovative Courses",
+    },
+  ];
+
   return (
     <div>
       {/* Hero Section */}
@@ -36,58 +57,80 @@ function Home() {
 
       {/* What we do */}
       <div className="pb-64 pt-32 md:pt-80">
-        <SectionWrapper className="flex justify-between">
+        <SectionWrapper className="relative">
           <>
-            <div className="md:w-3/5">
-              <h3 className="mb-4 text-2xl font-bold md:mb-10 md:text-5xl">
-                What we do here
-              </h3>
-              <div className="leading-7">
-                <p className="mb-8 text-justify">
-                  Hey there! Welcome to the Department of Computer Science at
-                  the University of Lagos! We're all about embracing innovation
-                  and staying on the cutting edge of technology. Our faculty and
-                  students are passionate about exploring AI, cybersecurity,
-                  software engineering, and more. With hands-on projects and
-                  real-world experiences, we're here to empower you on your
-                  journey to becoming a tech leader. We love to think outside
-                  the box and work closely with industry partners to make a
-                  meaningful impact.
-                </p>
-                <p className="text-justify">
-                  Our inclusive community celebrates diversity and provides a
-                  warm and supportive environment for everyone. Join us for
-                  enriching seminars, workshops, and tech talks to stay
-                  up-to-date with the latest tech trends. We're committed to
-                  helping you grow, from providing career support to offering
-                  exciting extracurricular activities. Let's embark on this
-                  exciting adventure together and shape the future of
-                  technology!
-                </p>
+            <div className="flex justify-between">
+              <div className="md:w-3/5">
+                <h3 className="mb-4 text-2xl font-bold md:mb-10 md:text-5xl">
+                  What we do here
+                </h3>
+                <div className="leading-7">
+                  <p className="mb-8 text-justify">
+                    Hey there! Welcome to the Department of Computer Science at
+                    the University of Lagos! We're all about embracing
+                    innovation and staying on the cutting edge of technology.
+                    Our faculty and students are passionate about exploring AI,
+                    cybersecurity, software engineering, and more. With hands-on
+                    projects and real-world experiences, we're here to empower
+                    you on your journey to becoming a tech leader. We love to
+                    think outside the box and work closely with industry
+                    partners to make a meaningful impact.
+                  </p>
+                  <p className="text-justify">
+                    Our inclusive community celebrates diversity and provides a
+                    warm and supportive environment for everyone. Join us for
+                    enriching seminars, workshops, and tech talks to stay
+                    up-to-date with the latest tech trends. We're committed to
+                    helping you grow, from providing career support to offering
+                    exciting extracurricular activities. Let's embark on this
+                    exciting adventure together and shape the future of
+                    technology!
+                  </p>
+                </div>
+              </div>
+              <div className="hidden w-1/3 items-center justify-end pr-2 md:flex lg:w-2/5">
+                <div className=" relative h-52 w-52 animate-spin-slow lg:h-72 lg:w-72">
+                  <div className="absolute left-1/2 top-0 flex h-16 w-16 -translate-x-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
+                    <Network className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
+                  </div>
+                  <div className="absolute right-0 top-1/2 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
+                    <Security className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
+                  </div>
+                  <div className="absolute bottom-0 left-1/2 flex  h-16 w-16 -translate-x-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
+                    <Productivity className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
+                  </div>
+                  <div className="absolute left-0 top-1/2 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
+                    <Code className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="hidden w-1/3 items-center justify-end pr-2 md:flex lg:w-2/5">
-              <div className=" relative h-52 w-52 animate-spin-slow lg:h-72 lg:w-72">
-                <div className="absolute left-1/2 top-0 flex h-16 w-16 -translate-x-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
-                  <Network className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
+            <div className="absolute -bottom-[500px] left-1/2 flex w-full -translate-x-1/2 flex-wrap justify-center gap-5 md:-bottom-96 md:flex-nowrap">
+              {numbers.map((item) => (
+                <div
+                  key={item.text}
+                  className="flex h-48 w-56 flex-col items-center justify-center rounded-2xl bg-lgreen lg:h-60 lg:w-72"
+                >
+                  <img
+                    src={item.icon}
+                    alt=""
+                    className="mb-8 h-10 w-10 lg:h-14 lg:w-14"
+                  />
+                  <h2 className="text-3xl font-bold text-[#222222]">
+                    {item.text}
+                  </h2>
+                  <p className="font-semibold text-[#222222]">
+                    {item.description}
+                  </p>
                 </div>
-                <div className="absolute right-0 top-1/2 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
-                  <Security className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
-                </div>
-                <div className="absolute bottom-0 left-1/2 flex  h-16 w-16 -translate-x-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
-                  <Productivity className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
-                </div>
-                <div className="absolute left-0 top-1/2 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-green lg:h-24 lg:w-24">
-                  <Code className="h-6 w-6 lg:h-[35px] lg:w-[35px]" />
-                </div>
-              </div>
+              ))}
             </div>
           </>
         </SectionWrapper>
       </div>
 
       {/* Dynamic learning environment */}
-      <div className="overflow-hidden bg-green pb-32 pt-32 sm:pb-56">
+      <div className="overflow-hidden bg-green pb-32 pt-64 sm:pb-56">
         <SectionWrapper className="flex flex-wrap items-center justify-between gap-10">
           <>
             <div className="h-72 -rotate-3 rounded-3xl bg-[#FFFFFF33] p-4 lg:h-96 lg:w-96 xl:h-[500px] xl:w-[490px]">
