@@ -13,6 +13,7 @@ import learning from "../assets/images/learning.jpg";
 import people from "../assets/icons/people.svg";
 import verified from "../assets/icons/verified.svg";
 import book from "../assets/icons/book.svg";
+import "aos/dist/aos.css";
 
 function Home() {
   const numbers = [
@@ -20,16 +21,19 @@ function Home() {
       icon: people,
       text: "500+",
       description: "Great Students",
+      aosValue: "fade-right",
     },
     {
       icon: verified,
       text: "40+",
       description: "Expert Mentors",
+      aosValue: "fade-up",
     },
     {
       icon: book,
       text: "100+",
       description: "Innovative Courses",
+      aosValue: "fade-left",
     },
   ];
 
@@ -61,11 +65,14 @@ function Home() {
           <>
             <div className="flex justify-between">
               <div className="md:w-3/5">
-                <h3 className="mb-4 text-2xl font-bold md:mb-10 md:text-5xl">
+                <h3
+                  data-aos="fade-up"
+                  className="mb-4 text-2xl font-bold md:mb-10 md:text-5xl"
+                >
                   What we do here
                 </h3>
                 <div className="leading-7">
-                  <p className="mb-8 text-justify">
+                  <p data-aos="fade-up" className="mb-8 text-justify">
                     Hey there! Welcome to the Department of Computer Science at
                     the University of Lagos! We're all about embracing
                     innovation and staying on the cutting edge of technology.
@@ -76,7 +83,7 @@ function Home() {
                     think outside the box and work closely with industry
                     partners to make a meaningful impact.
                   </p>
-                  <p className="text-justify">
+                  <p data-aos="fade-up" className="text-justify">
                     Our inclusive community celebrates diversity and provides a
                     warm and supportive environment for everyone. Join us for
                     enriching seminars, workshops, and tech talks to stay
@@ -105,9 +112,10 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-[700px] left-1/2 flex w-full -translate-x-1/2 flex-col flex-wrap items-center justify-center gap-5 px-5 sm:-bottom-[550px] sm:flex-row md:-bottom-[350px] md:w-auto md:flex-nowrap lg:-bottom-96">
+            <div className="absolute -bottom-[700px] left-1/2 flex w-full -translate-x-1/2 flex-col flex-wrap items-center justify-center gap-5 overflow-hidden px-5 sm:-bottom-[550px] sm:flex-row md:-bottom-[350px] md:w-auto md:flex-nowrap lg:-bottom-96">
               {numbers.map((item) => (
                 <div
+                  data-aos={item.aosValue}
                   key={item.text}
                   className="flex h-48 w-56 flex-col items-center justify-center rounded-2xl bg-lgreen lg:h-60 lg:w-72"
                 >
@@ -133,26 +141,31 @@ function Home() {
       <div className="overflow-hidden bg-green pb-32 pt-[600px] sm:pb-56 sm:pt-96 md:pt-64">
         <SectionWrapper className="flex flex-wrap items-center justify-between gap-10">
           <>
-            <div className="h-72 -rotate-3 rounded-3xl bg-[#FFFFFF33] p-4 lg:h-96 lg:w-96 xl:h-[500px] xl:w-[490px]">
-              <img
-                src={learning}
-                alt=""
-                className="h-full w-full rounded-2xl"
-              />
+            <div data-aos="fade-right">
+              <div className="h-72 -rotate-3 rounded-3xl bg-[#FFFFFF33] p-4 lg:h-96 lg:w-96 xl:h-[500px] xl:w-[490px]">
+                <img
+                  src={learning}
+                  alt=""
+                  className="h-full w-full rounded-2xl"
+                />
+              </div>
             </div>
             <div className="relative w-full text-white md:w-1/2 xl:w-[590px]">
-              <h3 className="mb-4 text-2xl font-bold md:mb-10 md:leading-tight lg:text-3xl xl:text-5xl">
+              <h3
+                data-aos="fade-up"
+                className="mb-4 text-2xl font-bold md:mb-10 md:leading-tight lg:text-3xl xl:text-5xl"
+              >
                 Join our Dynamic learning environment
               </h3>
               <div className="leading-7">
-                <p className="mb-6 text-justify">
+                <p data-aos="fade-up" className="mb-6 text-justify">
                   Here at Computer Science, we prioritise change, activity and
                   progress. Our core focus is intentionally designed to meet the
                   needs of all students while challenging them to enhance
                   existing skills, interests and understandings, as well as
                   meaningfully building new ones.
                 </p>
-                <p className="text-justify">
+                <p data-aos="fade-up" className="text-justify">
                   Not only do our students learn in a supportive environment
                   well equipped with use of modern educational facilities that
                   nurtures self-sufficiency and responsibility, but they also

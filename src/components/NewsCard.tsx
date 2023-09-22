@@ -12,7 +12,7 @@ interface INewsCard {
 
 function NewsCard({ id, thumbnail, date, title, preview }: INewsCard) {
   return (
-    <div className="mb-6">
+    <div data-aos="fade-up" className="mb-6">
       <img
         src={thumbnail}
         alt=""
@@ -31,9 +31,10 @@ function NewsCard({ id, thumbnail, date, title, preview }: INewsCard) {
       }`}</p>
       <Link
         to={`/post?q=${id}`}
-        className="mt-4 flex items-center gap-2 font-bold text-green"
+        className="mt-4 flex items-center gap-2 font-bold text-green [&>svg]:hover:translate-x-2"
       >
-        Learn More <HiArrowRight className="fill-green" />
+        Learn More{" "}
+        <HiArrowRight className="fill-green transition duration-300" />
       </Link>
     </div>
   );
