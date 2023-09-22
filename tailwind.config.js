@@ -32,8 +32,20 @@ export default {
         lgreen: "#F1FDD9",
         pgreen: "#C9E396",
       },
+      keyframes: {
+        scrollingleft: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translatex(-144vw)" },
+        },
+        scrollingright: {
+          "0%": { transform: "translateX(-144vw)" },
+          "100%": { transform: "translatex(0)" },
+        },
+      },
       animation: {
         "spin-slow": "spin 15s linear infinite",
+        "marquee-left": "scrollingleft 20s linear infinite",
+        "marquee-right": "scrollingright 20s linear infinite",
       },
     },
   },

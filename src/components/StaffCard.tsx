@@ -6,7 +6,7 @@ interface IStaffCard {
 
 function StaffCard({ img, name, title }: IStaffCard) {
   return (
-    <div className="mb-6 w-72 lg:w-[30%]">
+    <div data-aos="fade-up" className="mb-6 w-72 lg:w-[30%]">
       <img
         src={img}
         alt=""

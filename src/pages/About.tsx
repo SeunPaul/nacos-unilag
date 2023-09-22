@@ -9,29 +9,54 @@ import resilience from "../assets/illustrations/resilience.png";
 import inclusion from "../assets/illustrations/inclusion.png";
 import integrity from "../assets/illustrations/integrity.png";
 import growth from "../assets/illustrations/growth.png";
+import fun1 from "../assets/images/fun/IMG_0409.jpg";
+import fun2 from "../assets/images/fun/IMG_0427.jpg";
+import fun3 from "../assets/images/fun/IMG_0437.jpg";
+import fun4 from "../assets/images/fun/IMG_0461.jpg";
+import fun5 from "../assets/images/fun/IMG_0487.jpg";
+import fun6 from "../assets/images/fun/IMG_0509.jpg";
+import fun7 from "../assets/images/fun/IMG_0555.jpg";
+import fun8 from "../assets/images/fun/IMG_0588.jpg";
+import fun9 from "../assets/images/fun/IMG_0594.jpg";
 
 function About() {
   const values = [
     {
       img: resilience,
       title: "Resilience",
+      aosValue: "fade-right",
       desc: "We believe in perseverance and the power of dedication in achieving professional goals, in line with our mission of excellence.",
     },
     {
       img: inclusion,
       title: "Inclusion",
+      aosValue: "fade-up",
       desc: "As a team that is striving for a legacy of world-class results, we are ardent about working cordially with people of different backgrounds.",
     },
     {
       img: integrity,
       title: "Integrity",
+      aosValue: "fade-up",
       desc: "It's imperative to us to maintain a culture of morality in the midst of achieving our mission. We believe that integrity is key to a long-lasting legacy.",
     },
     {
       img: growth,
       title: "Growth",
+      aosValue: "fade-left",
       desc: "We are passionate about amplifying opportunities that will enrich the lives of our community supporting our members as they upskill professionally.",
     },
+  ];
+
+  const funImages = [
+    { type: "l", value: fun1 },
+    { type: "p", value: fun2 },
+    { type: "p", value: fun3 },
+    { type: "l", value: fun4 },
+    { type: "p", value: fun5 },
+    { type: "p", value: fun6 },
+    { type: "p", value: fun7 },
+    { type: "l", value: fun8 },
+    { type: "l", value: fun9 },
   ];
 
   return (
@@ -72,9 +97,10 @@ function About() {
               Values
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {values.map(({ img, title, desc }) => (
+              {values.map(({ img, title, aosValue, desc }) => (
                 <div
                   key={title}
+                  data-aos={aosValue}
                   className="w-full rounded-xl border border-green px-3 py-8 sm:w-[270px]"
                 >
                   <img src={img} alt="" className="mx-auto" />
@@ -110,6 +136,98 @@ function About() {
             </h3>
           </>
         </SectionWrapper>
+        <div className="overflow-hidden">
+          <div className="animate-marquee-left flex">
+            {funImages.map((img) => (
+              <div
+                key={img.value}
+                className={`mx-2 h-[350px] shrink-0 grow-0 ${
+                  img.type === "l" ? "basis-[500px]" : "basis-[300px]"
+                } `}
+              >
+                <img
+                  src={img.value}
+                  alt=""
+                  className="h-full w-full rounded-[8px] object-cover"
+                />
+              </div>
+            ))}
+            {funImages.map((img) => (
+              <div
+                key={img.value}
+                className={`mx-2 h-[350px] shrink-0 grow-0 ${
+                  img.type === "l" ? "basis-[500px]" : "basis-[300px]"
+                } `}
+              >
+                <img
+                  src={img.value}
+                  alt=""
+                  className="h-full w-full rounded-[8px] object-cover"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="animate-marquee-right my-5 flex">
+            {funImages.map((img) => (
+              <div
+                key={img.value}
+                className={`mx-2 h-[350px] shrink-0 grow-0 ${
+                  img.type === "l" ? "basis-[500px]" : "basis-[300px]"
+                } `}
+              >
+                <img
+                  src={img.value}
+                  alt=""
+                  className="h-full w-full rounded-[8px] object-cover"
+                />
+              </div>
+            ))}
+            {funImages.map((img) => (
+              <div
+                key={img.value}
+                className={`mx-2 h-[350px] shrink-0 grow-0 ${
+                  img.type === "l" ? "basis-[500px]" : "basis-[300px]"
+                } `}
+              >
+                <img
+                  src={img.value}
+                  alt=""
+                  className="h-full w-full rounded-[8px] object-cover"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="animate-marquee-left flex">
+            {funImages.map((img) => (
+              <div
+                key={img.value}
+                className={`mx-2 h-[350px] shrink-0 grow-0 ${
+                  img.type === "l" ? "basis-[500px]" : "basis-[300px]"
+                } `}
+              >
+                <img
+                  src={img.value}
+                  alt=""
+                  className="h-full w-full rounded-[8px] object-cover"
+                />
+              </div>
+            ))}
+            {funImages.map((img) => (
+              <div
+                key={img.value}
+                className={`mx-2 h-[350px] shrink-0 grow-0 ${
+                  img.type === "l" ? "basis-[500px]" : "basis-[300px]"
+                } `}
+              >
+                <img
+                  src={img.value}
+                  alt=""
+                  className="h-full w-full rounded-[8px] object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Faculty & Staff */}
