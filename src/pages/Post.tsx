@@ -49,26 +49,26 @@ function Post() {
       <div>
         <DesktopNavigation page="bits" />
         <SectionWrapper>
-          <div className="relative h-72 w-full overflow-hidden rounded-[16px]">
+          <div className="relative h-48 lg:h-80 w-full overflow-hidden rounded-[16px] flex flex-col justify-end align-bottom">
             <img
               src={post.thumbnail}
               alt=""
-              className="absolute h-full w-full object-cover"
+              className="absolute h-full w-full object-cover -z-10"
             />
-            <div>
-              <h1>{post.title}</h1>
+            <div className="text-white p-4 lg:p-8">
+              <h1 className="text-[24px] lg:text-[48px] font-bold lg:leading-[60px] max-w-[1000px]">{post.title}</h1>
               <div>
                 {post.date && <p>{post.date}</p>}
                 {post.time && <p>{post.time}</p>}
                 {post.location && <p>{post.location}</p>}
               </div>
             </div>
-            <div className="bg-bgradient absolute inset-0" />
+            <div className="bg-bgradient absolute inset-0 -z-10" />
           </div>
         </SectionWrapper>
       </div>
 
-      <div className="pt-16">
+      <div className="pt-8 lg:pt-16">
         <SectionWrapper>{post.body}</SectionWrapper>
       </div>
 

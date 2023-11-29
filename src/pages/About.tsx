@@ -1,3 +1,4 @@
+import Marquee from "react-fast-marquee";
 import DesktopNavigation from "../components/DesktopNavigation";
 import { SectionWrapper } from "../components/StyledComponents";
 import StaffCard from "../components/StaffCard";
@@ -48,6 +49,15 @@ function About() {
   ];
 
   const funImages = [
+    { type: "l", value: fun1 },
+    { type: "p", value: fun2 },
+    { type: "p", value: fun3 },
+    { type: "l", value: fun4 },
+    { type: "p", value: fun5 },
+    { type: "p", value: fun6 },
+    { type: "p", value: fun7 },
+    { type: "l", value: fun8 },
+    { type: "l", value: fun9 },
     { type: "l", value: fun1 },
     { type: "p", value: fun2 },
     { type: "p", value: fun3 },
@@ -137,7 +147,7 @@ function About() {
           </>
         </SectionWrapper>
         <div className="overflow-hidden">
-          <div className="animate-marquee-left flex">
+          <Marquee speed={100}>
             {funImages.map((img) => (
               <div
                 key={img.value}
@@ -152,6 +162,8 @@ function About() {
                 />
               </div>
             ))}
+          </Marquee>
+          <Marquee className="my-5" direction="right">
             {funImages.map((img) => (
               <div
                 key={img.value}
@@ -166,8 +178,8 @@ function About() {
                 />
               </div>
             ))}
-          </div>
-          <div className="animate-marquee-right my-5 flex">
+          </Marquee>
+          <Marquee speed={100}>
             {funImages.map((img) => (
               <div
                 key={img.value}
@@ -182,51 +194,7 @@ function About() {
                 />
               </div>
             ))}
-            {funImages.map((img) => (
-              <div
-                key={img.value}
-                className={`mx-2 h-[350px] shrink-0 grow-0 ${
-                  img.type === "l" ? "basis-[500px]" : "basis-[300px]"
-                } `}
-              >
-                <img
-                  src={img.value}
-                  alt=""
-                  className="h-full w-full rounded-[8px] object-cover"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="animate-marquee-left flex">
-            {funImages.map((img) => (
-              <div
-                key={img.value}
-                className={`mx-2 h-[350px] shrink-0 grow-0 ${
-                  img.type === "l" ? "basis-[500px]" : "basis-[300px]"
-                } `}
-              >
-                <img
-                  src={img.value}
-                  alt=""
-                  className="h-full w-full rounded-[8px] object-cover"
-                />
-              </div>
-            ))}
-            {funImages.map((img) => (
-              <div
-                key={img.value}
-                className={`mx-2 h-[350px] shrink-0 grow-0 ${
-                  img.type === "l" ? "basis-[500px]" : "basis-[300px]"
-                } `}
-              >
-                <img
-                  src={img.value}
-                  alt=""
-                  className="h-full w-full rounded-[8px] object-cover"
-                />
-              </div>
-            ))}
-          </div>
+          </Marquee>
         </div>
       </div>
 

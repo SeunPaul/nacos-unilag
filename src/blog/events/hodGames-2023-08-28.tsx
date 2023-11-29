@@ -4,47 +4,63 @@ import hodGamestn from "../../assets/images/news/Upcoming HOD games cover.png";
 const Content = () => {
   return (
     <div>
+      <h3 className="mb-4 text-xl font-bold">
+        Inviting students in all levels to our HOD games!!!
+      </h3>
       <p>
-        The Nigeria Association of Computing Students (NACOS) National Summit, a
-        highly anticipated event which was originally scheduled to take place on
-        28th - 31st August 2023 at our beloved school University of Lagos,
-        Nigeria, has been postponed by the National Executive Council of The
-        Nigeria Association of Computing Students (NACOS). Due to unforeseen
-        circumstances, it became necessary to reschedule the event for a later
-        date.
+        Gear up for an exhilarating semester as we announce the much-awaited HOD
+        Games, set to bring together all departments for a display of talent,
+        teamwork, and sportsmanship. Get ready to showcase your skills in a
+        range of thrilling outdoor and indoor games, where camaraderie and
+        competition merge to create unforgettable memories.
       </p>
-      <br />
+      <h3 className="my-4 text-xl font-bold">
+        Outdoor Games - Unleash the Athlete Within!
+      </h3>
       <p>
-        NACOS is committed to delivering a world-class summit that fosters
-        innovation, collaboration, and knowledge sharing among computing
-        students and professionals. Unfortunately, a series of unavoidable
-        events compelled them to make this difficult decision. They assure all
-        stakeholders, participants, and partners that the NACOS National
-        Innovation Summit will indeed take place at a new date and location,
-        which will be announced shortly. The team is working diligently to
-        finalize all arrangements to ensure a seamless and enriching experience
-        for everyone involved.
+        The thrill of the competition takes center stage in a lineup of outdoor
+        games that will leave your adrenaline pumping. The grand field, court
+        and tracks shall witness battles in:
       </p>
-      <br />
+      <ul>
+        <li>Football (Both Male and Female)</li>
+        <li>Volleyball (Both Male and Female)</li>
+        <li>Basketball</li>
+        <li>
+          Swimming (100m and 200m Tracks) - Show off your aquatic prowess!
+        </li>
+      </ul>
       <p>
-        The postponement came as a disappointment, but they view it as an
-        opportunity to enhance the overall quality of the summit and expand its
-        impact on the computing community. By taking this brief respite, they
-        aim to make the event even more innovative, informative, and
-        transformative for all attendees.
+        These games are not just an opportunity to claim victory but also to
+        form bonds and build connections with fellow department members.
       </p>
-      <br />
-      <p>
-        They sincerely apologize for any inconvenience this may cause to
-        registered participants, speakers, sponsors, and exhibitors. Your
-        enthusiasm and support have been invaluable, they promise to deliver an
-        exceptional event that exceeds everyone's expectations. Further updates
-        and announcements regarding the new date and location of the NACOS
-        National Innovation Summit and all updates will be communicated through
-        their official social media channels. They thank everyone for their
-        understanding and look forward to your continued support in making the
-        NACOS National Innovation Summit an unparalleled success.
-      </p>
+      <h3 className="my-4 text-xl font-bold">
+        Indoor Games - Challenge Your Mind and Reflexes!
+      </h3>
+      For those who prefer a strategic showdown, our indoor games arena will
+      test your mental acuity and gaming finesse. Engage in intense battles of:
+      Call of Duty (COD) FIFA Ludo Chess Scrabble ...and more! These contests
+      offer a different kind of excitement, where you can mastermind your way to
+      triumph. Unrivaled Rewards and Recognition Beyond the thrill of
+      competition, there are incredible incentives to seize! Every participant
+      is eligible for medals, making every sport a chance to shine.
+      Additionally, the champions of each game will be honored with prizes
+      presented by the esteemed Head of Department (HOD). Moreover, the event
+      presents an exclusive opportunity to interact with our sponsors. Learn
+      about their services, how they can assist you, and explore potential
+      future collaborations. It's not just a game; it's an occasion to broaden
+      your horizons! Celebrate and Revel - Music and Merriment! No event is
+      complete without an infusion of fun. We are delighted to announce the
+      presence of a talented DJ and charismatic MC to electrify the atmosphere.
+      So, prepare to dance, cheer, and make memories that will last a lifetime!
+      On your mark, Get ready! The HOD Games are a celebration of excellence,
+      unity, and healthy competition. Get ready and join us on this journey of
+      passion and sportsmanship. Whether you are a seasoned athlete or a novice
+      to the games, your participation matters, and we assure you an
+      unforgettable experience. Remember, it's more than just a competition;
+      it's about forging bonds, sharing laughter, and creating cherished moments
+      with your department comrades. Let us come together and make this semester
+      one to remember! See you at the HOD Games!
     </div>
   );
 };
